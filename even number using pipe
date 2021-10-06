@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<unistd.h>
 #include<sys/types.h>
-
 int main()
 {
         int fd[2];
@@ -22,7 +21,7 @@ int main()
                 }
                 write(fd[1],&n,sizeof(int));
                 if(write(fd[1],arr,sizeof(int)*n) == -1){
-                        printf("\n An Error occured while writing : ");
+                        printf("\n An Error occured while writing...");
                         return 2;
                 }
                 close(fd[1]);
@@ -40,11 +39,10 @@ int main()
                 }
                 for(i=0;i<n;i++){
                         if(a[i]%2 == 0){
-                                result[j] = a[i];
-                                                                                                                                                    j++;
+                                result[j] = a[i];                                                                                                                                            j++;
                         }
                 }
-                printf("\nEven Array : ");
+                printf("\nEven number Array : ");
                 for(i=0;i<j;i++){
                         printf("%d ",result[i]);
                 }
